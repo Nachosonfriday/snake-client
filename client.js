@@ -16,6 +16,14 @@ const connect = function () {
     conn.write('Name: MAZ');
   });
 
+  // conn.on('connect', () => {
+  //   conn.write('Move: up');
+  // });
+
+  // conn.on('connect', () => {
+  //  setInterval(() => conn.write('Move: right'), 1000);
+  // });
+
   conn.on("data", (data) => {
     console.log('this is the data', data);
   });
