@@ -25,6 +25,10 @@ let connection;
     if (key === 'd') {
       conn.write('Move: right');
     }
+
+    if (key === 'p') {
+      conn.write('Say: Big Shimmy Incomming!!!!');
+    }
   
     if (key === '\u0003') {
       process.exit();
