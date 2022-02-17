@@ -1,3 +1,5 @@
+const { moveDown, moveLeft, moveRight, moveUp, taunt } = require("./constants");
+
 let connection;
 
   const setupInput = (conn) => {
@@ -10,24 +12,24 @@ let connection;
     (handleUserInput(key));
   }) 
   const handleUserInput = function (key) {
-    if (key === 'w') {
+    if (key === moveUp) {
       conn.write('Move: up');
     }
   
-    if (key === 'a') {
+    if (key === moveLeft) {
       conn.write('Move: left');
     }
   
-    if (key === 's') {
+    if (key === moveDown) {
       conn.write('Move: down');
     }
   
-    if (key === 'd') {
+    if (key === moveRight) {
       conn.write('Move: right');
     }
 
-    if (key === 'p') {
-      conn.write('Say: Big Shimmy Incomming!!!!');
+    if (key === taunt) {
+      conn.write("Big Shimmy Incomming");
     }
   
     if (key === '\u0003') {
